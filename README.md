@@ -1,4 +1,4 @@
-# 🦸‍♀️S-Hero
+# 🦸‍♀️Smallville City
 > “Em um mundo cada vez mais apático, lembrar da esperança nunca foi tão importante.”
 
 ## 📖 Sobre o Projeto
