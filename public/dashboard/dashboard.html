@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Superman</title>
+<link rel="icon" href="https://images.seeklogo.com/logo-png/16/2/3-colors-superman-logo-png_seeklogo-169352.png"
+        type="image">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <aside class="sidebar">
+
+            <h2>SMALLVILLE CITY</h2>
+
+            <nav>
+                <a href="#">Dashboard</a>
+                <a href="#">Usuários</a>
+            </nav>
+
+        </aside>
+
+  
+        <main class="conteudo">
+
+            <h1>Dashboard</h1>
+
+           
+            <section class="cards">
+
+                <div class="card">
+                    <h3>Logins Hoje</h3>
+                    <p>128</p>
+                </div>
+
+                <div class="card">
+                    <h3>Usuários</h3>
+                    <p>532</p>
+                </div>
+
+            </section>
+
+            
+            <section class="grafico-area">
+
+                <h2>Logins da Semana</h2>
+
+                <canvas id="graficoLogin"></canvas>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

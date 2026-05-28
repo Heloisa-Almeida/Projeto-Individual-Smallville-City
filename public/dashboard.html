@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallville City</title>
+
+    <link rel="icon" href="https://images.seeklogo.com/logo-png/16/2/3-colors-superman-logo-png_seeklogo-169352.png"
+        type="image">
+
+    <link rel="stylesheet" href="css/dashboards.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <img width="200px" src="css/dash-img.png" alt="Logo Dash">
+        </h1>
+    </header>
+
+    <main>
+
+        <section class="cards">
+
+            <div class="cards">
+
+                <div class="card velocidade">
+                    <h2>Velocidade</h2>
+                    <p class="valor" id="velocidadeValor"></p>
+                </div>
+
+                <div class="card forca">
+                    <h2>Força</h2>
+                    <p class="valor" id="forcaValor"></p>
+                </div>
+
+                <div class="card voo">
+                    <h2>Voo</h2>
+                    <p class="valor" id="vooValor"></p>
+                </div>
+
+                <div class="card raio">
+                    <h2>Raio Laser</h2>
+                    <p class="valor" id="raioValor"></p>
+                </div>
+
+                <div class="card sopro">
+                    <h2>Sopro Congelante</h2>
+                    <p class="valor" id="soproValor"></p>
+                </div>
+
+                <div class="card invulnerabilidade">
+                    <h2>Invulnerabilidade</h2>
+                    <p class="valor" id="invulnerabilidadeValor"></p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="grafico">
+
+            <canvas id="radarChart"></canvas>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Projeto acadêmico | Desenvolvido por Heloisa de Almeida Oliveira
+        </p>
+    </footer>
+    <script>
+        const velocidade = 95;
+        const forca = 100;
+        const voo = 98;
+        const raio = 90;
+        const sopro = 85;
+        const invulnerabilidade = 100;
+
+        document.getElementById("velocidadeValor").innerText = velocidade;
+
+        document.getElementById("forcaValor").innerText = forca;
+
+        document.getElementById("vooValor").innerText = voo;
+
+        document.getElementById("raioValor").innerText = raio;
+
+        document.getElementById("soproValor").innerText = sopro;
+
+        document.getElementById("invulnerabilidadeValor").innerText = invulnerabilidade;
+
+        const ctx = document.getElementById('radarChart');
+
+        new Chart(ctx, {
+            type: 'radar',
+
+            data: {
+                labels: [
+                    'Velocidade',
+                    'Força',
+                    'Voo',
+                    'Raio Laser',
+                    'Sopro',
+                    'Invulnerabilidade'
+                ],
+
+                datasets: [{
+                    label: 'Poderes do Superman',
+
+                    data: [
+                        velocidade,
+                        forca,
+                        voo,
+                        raio,
+                        sopro,
+                        invulnerabilidade
+                    ],
+
+                    backgroundColor: 'rgba(255, 0, 0, 0.3)',
+
+                    borderColor: '#ffd60a',
+
+                    borderWidth: 3,
+
+                    pointBackgroundColor: '#ffd60a',
+
+                    pointBorderColor: '#fff',
+
+                    pointHoverBackgroundColor: '#fff',
+
+                    pointHoverBorderColor: '#ffd60a',
+
+                    pointRadius: 5
+                }]
+            },
+
+            options: {
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                scales: {
+                    r: {
+
+                        min: 0,
+                        max: 100,
+
+                        ticks: {
+                            stepSize: 20,
+
+                            color: 'white',
+
+                            backdropColor: 'transparent'
+                        },
+
+                        pointLabels: {
+                            color: 'white',
+
+                            font: {
+                                size: 15
+                            }
+                        },
+
+                        grid: {
+                            color: 'rgba(255,255,255,0.2)'
+                        },
+
+                        angleLines: {
+                            color: 'rgba(255,255,255,0.2)'
+                        }
+                    }
+                },
+
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white',
+
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

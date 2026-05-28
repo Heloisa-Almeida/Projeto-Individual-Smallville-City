@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallville City</title>
+    <link rel="icon" href="https://images.seeklogo.com/logo-png/16/2/3-colors-superman-logo-png_seeklogo-169352.png"
+        type="image">
+    <link rel="stylesheet" href="css/styleSignUp.css">
+</head>
+
+<body>
+    <div id="title">
+        <h1>Cadastrar</h1>
+    </div>
+    <div id="campos">
+        <p>Insira seu nome:</p>
+        <input type="text" id="ipt_name" placeholder="Nome">
+        <p>Insira seu apelido:</p>
+        <input type="text" id="ipt_nickName" placeholder="Apelido">
+        <p>Insira seu e-mail:</p>
+        <input type="text" id="ipt_mail" placeholder="E-mail">
+        <p>Insira uma senha:</p>
+        <input type="text" id="ipt_passwd" placeholder="Senha"><br><br>
+        <div id="div_passwd"></div>
+    </div>
+    
+
+    <div id="buttons">
+        <button onclick="signUp()">Cadastrar</button>
+        <a href="login.html">
+            <button onclick="loginPage()">Já tenho uma conta</button>
+        </a>
+    </div>
+
+</body>
+</html>
+<script>
+
+  function signUp() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = ipt_name.value;
+    var apelidoVar = ipt_nickName.value;
+    var emailVar = ipt_mail.value;
+    var senhaVar = ipt_passwd.value;
+
+    // Verificando se há algum campo em branco
+    if (
+      nomeVar == "" ||
+      apelidoVar == "" ||
+      emailVar == "" ||
+      senhaVar == ""
+    ) {
+      alert('Deu erro')
+    } 
+
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        apelidoServer: apelidoVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+    return false;
+  }
+</script>

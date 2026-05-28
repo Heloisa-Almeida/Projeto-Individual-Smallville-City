@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallville City</title>
+    <link rel="stylesheet" href="styleLogin.css">
+</head>
+
+<body>
+    <div id="title">
+        <h1>Login</h1>
+    </div>
+    <div id="campos">
+        <p>Insira seu e-mail:</p>
+        <input type="text" id="ipt_mail" placeholder="Insira Seu E-mail">
+        <p>Insira sua senha:</p>
+        <input type="text" id="ipt_passwd" placeholder="Insira Uma Senha">
+    </div>
+    <div id="button">
+        <button onclick="logIn()">Entrar</button>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function logIn(){
+    let data = {
+        mail: ipt_mail.value,
+        passwd: ipt_passwd.value
+    }
+    let found = false;
+
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].email === email && usuarios[i].senha === senha) {
+            found = true;
+            break;
+        }
+    }
+
+    if (found) {
+        alert("Login realizado!");
+    } else {
+        alert("Email ou senha incorretos");
+}
+    }
+</script>

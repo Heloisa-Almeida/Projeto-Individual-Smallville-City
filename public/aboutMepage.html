@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallville City</title>
+    <link rel="icon" href="https://images.seeklogo.com/logo-png/16/2/3-colors-superman-logo-png_seeklogo-169352.png"
+        type="image">
+        <link rel="stylesheet" href="css/styleAboutMePage.css">
+</head>
+<body>
+    <h1>Quem sou eu?</h1>
+    <div class="text">
+<p>Me chamo Heloisa de Almeida Oliveira e sou estudante de Análise e Desenvolvimento de Sistemas pela SPTech.<br>
+Este projeto foi criado para aplicar, na prática, os conhecimentos que adquiri no meu primeiro semestre.<br>
+Escolhi o tema Superman por ser um personagem que fez parte da minha infância e que sempre admirei, não apenas pelos seus poderes, mas pelos valores que representa.<br>
+Em um mundo onde a apatia e o egoísmo são cada vez mais comuns, acredito na importância de figuras que inspirem empatia, coragem e responsabilidade.<br>
+É isso que este projeto busca refletir.</p>
+    </div>
+
+<h3>Clique aqui para obter um retrato meu:</h3>
+<button onclick="show()">Retrato</button>
+<div id="div_portrait"></div>
+</body>
+
+ <footer>
+        <p>
+            Projeto acadêmico | Desenvolvido por Heloisa de Almeida Oliveira
+        </p>
+    </footer>
+</html>
+<script>
+    function show(){
+        div_portrait.innerHTML = `<img src="css/euSupermanReal.jpg" alt="eusperman">`;
+    }
+</script>

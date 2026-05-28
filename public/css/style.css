@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #62a1ff;
+    color: white;
+}
+
+/* SLIDER */
+
+.slider{
+    width: 100%;
+    height: 50vh;
+
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+
+    height: 100%;
+
+    transition: transform 1s ease-in-out;
+}
+
+.slides img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+/* HEADER */
+
+header{
+    background: linear-gradient(
+        to top,
+        rgba(223, 13, 13, 0),
+        rgba(223, 13, 13, 0.6)
+    );
+
+    border-top: 4px solid #ffd700;
+
+    padding: 30px 0;
+}
+
+header h1{
+    display: flex;
+    justify-content: center;
+
+    margin-top: -70px;
+
+    transform: rotate(5deg);
+}
+
+header img{
+    width: 400px;
+}
+
+/* NAV */
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+nav img{
+    width: 250px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.btn-calculadora img{
+    width: 200px;
+
+    margin-top: 25px;
+
+    transform: rotate(-2deg);
+}
+
+/* SORTEIO */
+
+.btn-sorteio img{
+    width: 200px;
+
+    margin-top: 25px;
+
+    transform: rotate(-2deg);
+}
+
+.btn-dash img{
+    width: 180px;
+
+    margin-top: 20px;
+
+    transform: rotate(-1deg);
+}
+
+/* SOBRE */
+
+.btn-sobre img{
+    width: 200px;
+
+    margin-top: -10px;
+
+    transform: rotate(-2deg);
+}
+
+.btn-entry img{
+    width: 150px;
+
+    margin-top: 20px;
+
+    transform: rotate(4deg);
+}
+
+nav img:hover{
+    transform: scale(1.05);
+}
+
+/* BOTÕES */
+
+button{
+    background: #ffd700;
+    color: #001f4d;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #ffcc00;
+
+    transform: scale(1.05);
+}
+
+.headerH{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    transform: rotate(9deg);
+
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    margin-top: -150px; /* ajuste esse valor ao gosto */
+}
+
+.p1,
+.p2 {
+    width: 18rem;
+    height: 23rem;
+    background-color: white;
+    border: 4px solid #f2ff00;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    
+}
+
+.p1 {
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyYWRkZXZsZTVuZ2I2djhnNHoxMDdoOXowczZleTRwaWY3empxaXQ3MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/10bKPDUM5H7m7u/200w.gif');
+}
+
+.p2 {
+    background-image: url('https://www.gifcen.com/wp-content/uploads/2022/02/superman-gif-9.gif');
+}
+
+.text {
+    text-align: center;
+    width: 40%;
+    background: rgb(194, 29, 29);
+    padding: 30px 25px;
+    border-radius: 20px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    /* remova o margin-top: -24% daqui */
+}
+
+.text p {
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 6px black;
+    text-align: center;
+    line-height: 1.8;
+}
+/* CURIOSIDADES */
+
+.curiosidade{
+    width: 80%;
+    max-width: 700px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    background: rgb(31, 31, 178);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.curiosidade h2{
+    color: #ffd700;
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+}
+
+select{
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+#div_funFact{
+    margin-top: 30px;
+
+    min-height: 250px;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    color: white;
+    text-shadow: 2px 2px 8px black;
+
+    background-size: cover;
+    background-position: 50% 20%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* camada escura na imagem */
+#div_funFact::before{
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+}
+
+/* texto acima da camada escura */
+#div_funFact p{
+    position: relative;
+    z-index: 2;
+}
+
+
+/* FOOTER */
+
+footer{
+    background: #c40000;
+
+    border-top: 4px solid #ffd700;
+
+    padding: 20px;
+
+    text-align: center;
+
+    margin-top: 50px;
+}

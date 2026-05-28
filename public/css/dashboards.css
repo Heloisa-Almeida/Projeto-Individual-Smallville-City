@@ -1,0 +1,264 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+
+body{
+    background: #62a1ff;
+    color: white;
+}
+
+/* HEADER */
+
+header{
+    width: 100%;
+
+    padding: 20px;
+
+    background: linear-gradient(to bottom, rgb(184, 7, 7), transparent);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* IMAGEM */
+
+header img{
+    width: 350px;
+
+    margin-top: 20px;
+
+    transform: rotate(4deg);
+}
+
+/* NAV */
+
+nav{
+    display: flex;
+
+    gap: 20px;
+}
+
+nav a{
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #ffd60a;
+}
+
+/* MAIN */
+
+main{
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+/* CARDS */
+
+.cards{
+    display: flex;
+
+    gap: 15px;
+
+    justify-content: center;
+
+    flex-wrap: nowrap;
+
+    padding: 20px;
+
+        margin-top: -30px;
+
+}
+
+.card{
+    width: 200px;
+
+    height: 120px;
+
+    padding: 10px;
+
+    box-shadow: 0px 0px 20px rgba(255, 214, 10, 0.7);
+
+    border-radius: 15px;
+
+    border: 2px solid #ffd60a;
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.valor{
+    font-size: 45px;
+
+    font-weight: bold;
+
+    color: #ffd60a;
+
+    text-shadow: 0px 0px 10px rgba(168, 142, 10, 0.689);
+
+    z-index: 1;
+}
+
+/* ESCURECER IMAGEM */
+
+.card::before{
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+}
+
+/* TEXO NA FRENTE */
+
+.card h2,
+.card p{
+    position: relative;
+
+    z-index: 1;
+}
+
+.card h2{
+    color: #ffd60a;
+
+    font-size: 18px;
+}
+
+/* HOVER */
+
+.card:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* BACKGROUNDS */
+
+.velocidade{
+    background-image: url("https://images4.alphacoders.com/821/thumb-1920-821228.png");
+}
+
+.forca{
+    background-image: url("https://static0.srcdn.com/wordpress/wp-content/uploads/2025/03/superman-holds-up-a-planet.jpg");
+}
+
+.voo{
+    background-image: url("https://t4.ftcdn.net/jpg/08/40/54/53/360_F_840545301_Uq0SixkjCDSUgGVttLx4iXagIq7fYmc0.jpg");
+}
+
+.raio{
+    background-image: url("https://wallpapers.com/images/hd/animated-cartoon-superman-laser-eyes-2yjjmw8kqx2lyqf5.jpg");
+}
+
+.sopro{
+    background-image: url("https://static0.srcdn.com/wordpress/wp-content/uploads/2023/09/superman-uses-freeze-breath-dc.jpg?q=50&fit=crop&w=825&dpr=1.5");
+}
+
+.invulnerabilidade{
+    background-image: url("https://static.wikia.nocookie.net/headhuntersholosuite/images/4/4c/Superman_-_Alex_Ross.jpg/revision/latest?cb=20180729155720");
+}
+
+/* GRÁFICO */
+
+.grafico{
+    width: 100%;
+
+    height: 500px;
+
+    background: #0040ff;
+
+    border-radius: 15px;
+
+    border: 2px solid #ffd60a;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: 0px 0px 20px rgba(255, 214, 10, 0.5);
+}
+
+#radarChart{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* FOOTER */
+
+footer{
+    text-align: center;
+
+    padding: 10px;
+
+    margin-top: 40px;
+
+    border-top: 2px solid #ffd60a;
+
+    color: #000000;
+    background-color: #ac0000;
+}
+
+/* BARRA */
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+/* FUNDO DA BARRA */
+
+::-webkit-scrollbar-track{
+    background: #62a1ff;
+}
+
+/* PARTE QUE DESCE */
+
+::-webkit-scrollbar-thumb{
+    background: #ff0a0a;
+
+    border-radius: 10px;
+}
+
+/* HOVER */
+
+::-webkit-scrollbar-thumb:hover{
+    background: #ac0000;
+}

@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #62a1ff;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.title{
+    align-items: center;
+    justify-content: center;
+    margin-top: -2%;
+     transform: rotate(7deg);
+}
+
+/* Cada "caixa" */
+.calculadora1{
+    width: 60%;
+    margin: 40px auto;
+background-image:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('https://i.pinimg.com/736x/39/9f/9a/399f9a5a94c2c5527d8fe4823a4d9634.jpg');
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 6px black;
+}
+
+.calculadora2{
+
+    width: 60%;
+
+    margin: 40px auto;
+
+    background-image:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('https://i.pinimg.com/1200x/43/ef/16/43ef167657ed5ef72bd902d02adedfc3.jpg');
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 6px black;
+}
+
+.calculadora3{
+
+    width: 60%;
+
+    margin: 40px auto;
+
+    background-image:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('https://i.pinimg.com/736x/33/da/4e/33da4eb91363d9790bb09a701b84be71.jpg');
+
+    background-size: cover;
+
+    background-position: 50% 25%;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 6px black;
+}
+
+/* Texto */
+.calculadora p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+input {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* Botões */
+button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+button:hover {
+    background-color: #cc0000;
+        transform: scale(1.05);
+
+}
+
+/* Resultados */
+div[id^="div_"] {
+    margin-top: 10px;
+    font-weight: bold;
+}

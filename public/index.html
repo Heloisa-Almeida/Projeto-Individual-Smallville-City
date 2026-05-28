@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smallville City</title>
+
+<script src="./js/sessao.js"></script>
+
+    <link rel="icon"
+        href="https://images.seeklogo.com/logo-png/16/2/3-colors-superman-logo-png_seeklogo-169352.png">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SLIDER -->
+    <section class="slider">
+        <div class="slides" id="slides"></div>
+    </section>
+
+    <!-- HEADER -->
+    <header>
+        <h1>
+            <img
+                src="https://www.transparentpng.com/download/superman-logo/EPRe2S-superman-logo-text-transparent.png"
+                alt="Logo Superman">
+        </h1>
+    </header>
+
+    <!-- BOTÕES -->
+    <nav>
+
+        <a class="btn-calculadora" href="calculators.html">
+            <img src="css/imagem_calculadoras.png" alt="Calculadoras">
+        </a>
+
+        <a class="btn-sorteio" href="randomPowers.html">
+            <img src="css/imagem_sorteio.png" alt="Sorteio">
+        </a>
+
+        <a class="btn-dash" href="dashboard.html">
+            <img src="css/dash-img.png" alt="dash">
+        </a>
+
+        <a class="btn-sobre" href="aboutMepage.html">
+            <img src="css/imagem_sobremim.png" alt="Sobre mim">
+        
+        </a>
+
+        <a class="btn-entry" href="cadastro.html">
+            <img src="css/icon_entrar.png" alt="cadastro">
+        
+        </a>
+        
+    </nav>
+
+    <section class="history">
+    <div class="headerH">
+        <img width="400" src="css/historia.png">
+    </div>
+    <div class="layout">
+        <div class="p1"></div>
+        <div class="text">
+            <p>Em um planeta prestes a explodir, um bebê chamado Kal-El é enviado à Terra por seus pais para sobreviver.
+                <br>Criado como Clark Kent por uma família do interior, ele cresce descobrindo poderes incríveis.
+                <br>Já adulto, decide usar suas habilidades para proteger a humanidade, tornando-se o Superman.
+                <br>O maior herói de Metrópolis e símbolo de esperança para o mundo.</p>
+        </div>
+        <div class="p2"></div>
+    </div>
+</section>
+
+    <!-- CURIOSIDADES -->
+    <section class="curiosidade">
+
+        <h2>Curiosidades</h2>
+
+        <select id="selectFunfact">
+
+            <option value="">Escolha uma curiosidade</option>
+            <option value="1">Curiosidade 1</option>
+            <option value="2">Curiosidade 2</option>
+            <option value="3">Curiosidade 3</option>
+            <option value="4">Curiosidade 4</option>
+            <option value="5">Curiosidade 5</option>
+
+        </select>
+
+        <button onclick="showFunfact()">
+            Mostrar curiosidade
+        </button>
+
+        <div id="div_funFact"></div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            Projeto acadêmico | Desenvolvido por Heloisa de Almeida Oliveira
+        </p>
+    </footer>
+
+    <script>
+
+        // ARRAY DE IMAGENS
+
+        const banners = [
+
+            "https://i.pinimg.com/1200x/e2/03/2a/e2032ab847dd3f3730dc3fb409921406.jpg",
+
+            "https://i.pinimg.com/1200x/fb/98/41/fb98414456aceb4077c314cec7042527.jpg",
+
+            "https://i.pinimg.com/1200x/ab/4b/d0/ab4bd0120283b7c0c852e6f6fd667840.jpg",
+
+            "https://i.pinimg.com/1200x/0a/c6/fe/0ac6fecbbe075a6d2227dc86f3022354.jpg",
+
+            "https://sktchd.com/wp-content/uploads/2023/11/Superman-Header.jpeg",
+
+            "https://movieviral.com/wp-content/uploads/2010/02/superman-header.jpg"
+
+        ];
+
+        const slides = document.getElementById("slides");
+
+        // CRIAR IMAGENS
+
+        for (let i = 0; i < banners.length; i++) {
+
+            slides.innerHTML += `
+                <img src="${banners[i]}">
+            `;
+        }
+
+        // CARROSSEL
+
+        let atual = 0;
+
+        function trocarSlide() {
+
+            atual++;
+
+            if (atual >= banners.length) {
+                atual = 0;
+            }
+
+            slides.style.transform =
+                `translateX(-${atual * 100}%)`;
+        }
+
+        setInterval(trocarSlide, 3000);
+
+        // CURIOSIDADES
+
+        function showFunfact(){
+
+    var select = document.getElementById("selectFunfact").value;
+
+    var div = document.getElementById("div_funFact");
+
+    if(select == "1"){
+
+        div.innerHTML = `
+            <p>Suas células absorvem a radiação do sol amarelo da Terra.</p>
+        `;
+
+        div.style.backgroundImage = "url('https://static0.cbrimages.com/wordpress/wp-content/uploads/2019/05/all-star-superman-1093.jpg?q=50&fit=crop&w=750&dpr=1.5')";
+
+    }
+
+    else if(select == "2"){
+
+        div.innerHTML = `
+            <p>O nome kriptoniano do Superman é Kal-El.</p>
+        `;
+
+        div.style.backgroundImage = "url('https://i.pinimg.com/736x/43/17/03/431703e53f1d31831d5755dbae9dce4f.jpg')";
+
+    }
+
+    else if(select == "3"){
+
+        div.innerHTML = `
+            <p>A maior fraqueza do Superman é a kryptonita.</p>
+        `;
+
+        div.style.backgroundImage = "url('https://t.ctcdn.com.br/IO4ZCEcshn6vs9e37Vtp8U5vv98=/1024x576/smart/i798673.jpeg')";
+
+    }
+
+    else if(select == "4"){
+
+        div.innerHTML = `
+            <p>Os óculos do Clark Kent possuem tecnologia kryptoniana que causam hipnose.<br>(Sim, por isso ninguém sabe sua identidade secreta)</p>
+        `;
+
+        div.style.backgroundImage = "url('https://i.pinimg.com/736x/24/75/e7/2475e7217bc8cb55ff4b563da65acfd6.jpg')";
+
+    }
+
+    else if(select == "5"){
+
+        div.innerHTML = `
+            <p>Superman já namorou a sereia Lori Lemaris, durante seus dias de faculdade.</p>
+        `;
+
+        div.style.backgroundImage = "url('https://i.pinimg.com/1200x/01/63/42/016342a8af45eb1f0ddc2d2495e38416.jpg')";
+
+    }
+
+    else{
+
+        div.innerHTML = "Escolha uma opção!";
+        div.style.backgroundImage = "none";
+
+    }
+}
+    </script>
+
+</body>
+
+</html>
