@@ -14,13 +14,14 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body onload="buscarInfo()">
 
     <header>
         <h1>
             <img width="200px" src="css/dash-img.png" alt="Logo Dash">
         </h1>
     </header>
+    <a href="/index.html" class="btn-home">Home</a>
 
     <main>
 
@@ -76,12 +77,12 @@
         </p>
     </footer>
     <script>
-        const velocidade = 95;
-        const forca = 100;
-        const voo = 98;
-        const raio = 90;
-        const sopro = 85;
-        const invulnerabilidade = 100;
+var velocidade = 95;
+        var forca = 100;
+        var voo = 98;
+        var raio = 90;
+        var sopro = 85;
+        var invulnerabilidade = 100;
 
         document.getElementById("velocidadeValor").innerText = velocidade;
 
@@ -97,7 +98,7 @@
 
         const ctx = document.getElementById('radarChart');
 
-        new Chart(ctx, {
+        var radarChart = new Chart(ctx, {
             type: 'radar',
 
             data: {
@@ -190,6 +191,42 @@
                 }
             }
         });
+
+
+
+        function buscarInfo(){
+    fetch("/dashboard/buscarInfo")
+        .then(function(resposta){
+            resposta.json().then(json => {
+                velocidade = json.superVelocidade;
+                velocidadeValor.innerHTML = json.superVelocidade;
+                forca = json.superForca;
+                forcaValor.innerHTML = json.superForca;
+                voo = json.voo;
+                vooValor.innerHTML = json.voo;
+                raio = json.raioLaser;
+                raioValor.innerHTML = json.raioLaser;
+                sopro = json.soproCongelante;
+                soproValor = json.soproCongelante;
+                invulnerabilidade = json.invulnerabilidade;
+                invulnerabilidadeValor = json.invulnerabilidade;
+
+            radarChart.data.datasets[0].data = [
+                velocidade,
+                forca,
+                voo,
+                raio,
+                sopro,
+                invulnerabilidade
+            ];
+
+            radarChart.update();
+            });
+        })
+        .catch(function(erro){
+            console.error("Erro ao buscar informações:", erro);
+        });
+}
 
     </script>
 

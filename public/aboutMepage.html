@@ -9,7 +9,11 @@
         <link rel="stylesheet" href="css/styleAboutMePage.css">
 </head>
 <body>
-    <h1>Quem sou eu?</h1>
+     <header>
+        <h1>Quem sou eu?</h1>
+    </header>
+     <a href="/index.html" class="btn-home">Home</a>
+    
     <div class="text">
 <p>Me chamo Heloisa de Almeida Oliveira e sou estudante de Análise e Desenvolvimento de Sistemas pela SPTech.<br>
 Este projeto foi criado para aplicar, na prática, os conhecimentos que adquiri no meu primeiro semestre.<br>
@@ -30,7 +34,10 @@ Em um mundo onde a apatia e o egoísmo são cada vez mais comuns, acredito na im
     </footer>
 </html>
 <script>
-    function show(){
-        div_portrait.innerHTML = `<img src="css/euSupermanReal.jpg" alt="eusperman">`;
-    }
+function show() {
+    div_portrait.innerHTML = `
+        <img src="css/euSupermanReal.jpg" alt="eusperman">
+        <img src="css/euCrianca.png" alt="eusuperman">
+    `;
+}
 </script>

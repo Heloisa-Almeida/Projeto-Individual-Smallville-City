@@ -7,51 +7,60 @@
     <title>Smallville City</title>
     <link rel="icon" href="https://images.seeklogo.com/logo-png/16/2/3-colors-superman-logo-png_seeklogo-169352.png"
         type="image">
-        <link rel="stylesheet" href="css/styleCalculators.css">
+    <link rel="stylesheet" href="css/styleCalculators.css">
 </head>
 
 <body>
-    <div class="title"><img width="30%" src="css/imagem_calculadoras.png"></div>
+    
+    <header>
+        <h1>
+            <img width="100%" src="css/imagem_calculadoras.png">
+        </h1>
+    </header>
+     <a href="/index.html" class="btn-home">Home</a>
 
     <div class="calculadora1">
         <h3><span style="color: yellow;">Força VS Kriptonita</span></h3>
-    <p>A maior fraqueza do Superman é um fragmento radioativo do planeta Krypton, intitulado Kriptonita.<br>
-        Quanto maior for a exposição do Superman a esse fragmento, mais fraco ele fica.<br>
-        Calcule até quanta Kriptonita o Superman aguenta sem sucumbir!</p><br>
-    <input type="number" id="ipt_strength" placeholder="Força do Superman">
-    <input type="number" id="ipt_kryptonite" oninput="calcKryptonite()" placeholder="Quantidade de Kriptonita"> <br><br>
-    <div id="div_Kryptonite"></div>
+        <p>A maior fraqueza do Superman é um fragmento radioativo do planeta Krypton, intitulado Kriptonita.<br>
+            Quanto maior for a exposição do Superman a esse fragmento, mais fraco ele fica.<br>
+            Calcule até quanta Kriptonita o Superman aguenta sem sucumbir!</p><br>
+        <input type="number" id="ipt_strength" placeholder="Força do Superman">
+        <input type="number" id="ipt_kryptonite" oninput="calcKryptonite()" placeholder="Quantidade de Kriptonita">
+        <br><br>
+        <div id="div_Kryptonite"></div>
     </div>
-    
+
 
     <div class="calculadora2">
         <h3><span style="color: yellow;">Velocidade do Superman</span></h3>
-    <p>Uma artista famosa de Metropolis chamada Laysa foi sequestrada pelo malfeitor Lex Luthor!<br>
-        Em quanto tempo o Superman consegue se deslocar de onde está até o esconderijo de Lex?</p><br>
-    <input type="number" id="ipt_distance" placeholder="Insira a Distância">
-    <input type="number" id="ipt_velocity" placeholder="Insira a Velocidade"><br><br>
-    <button onclick="calcSpeed()">Calcular Velocidade</button>
-    <div id="div_Speed"></div>
+        <p>Uma artista famosa de Metropolis chamada Laysa foi sequestrada pelo malfeitor Lex Luthor!<br>
+            Em quanto tempo o Superman consegue se deslocar de onde está até o esconderijo de Lex?</p><br>
+        <input type="number" id="ipt_distance" placeholder="Insira a Distância">
+        <input type="number" id="ipt_velocity" placeholder="Insira a Velocidade"><br><br>
+        <button onclick="calcSpeed()">Calcular Velocidade</button>
+        <div id="div_Speed"></div>
 
     </div>
-    
+
     <div class="calculadora3">
         <h3><span style="color: yellow;">Impacto do Soco</span></h3>
-    <p>O Superman é muito conhecido por sua força descomunal. <br>
-        Para calcular a força deste herói, usaremos física!<br>
-        Mais especificamente, a fórmula da energia cinética, que relaciona a massa e a velocidade do movimento.<br>
-        P.S. A energia do soco será usada como uma estimativa do impacto.<br>
-        <span style="color: yellow;">Fun fact: na HQ Superman #677(2008), Superman segura o mundo nas costas para que Atlas consiga ir ao casamento
-        da filha.</span></p><br>
-    <input type="number" id="ipt_mass" placeholder="Insira a Massa (kg)">
-    <input type="number" id="ipt_speed" placeholder="Insira a Velocidade (m/s)"> <br><br>
-    <button onclick="calcImpact()">Calcular Impacto</button>
-    <div id="div_Impact"></div>
+        <p>O Superman é muito conhecido por sua força descomunal. <br>
+            Para calcular a força deste herói, usaremos física!<br>
+            Mais especificamente, a fórmula da energia cinética, que relaciona a massa e a velocidade do movimento.<br>
+            P.S. A energia do soco será usada como uma estimativa do impacto.<br>
+            <span style="color: yellow;">Fun fact: na HQ Superman #677(2008), Superman segura o mundo nas costas para
+                que Atlas consiga ir ao casamento
+                da filha.</span>
+        </p><br>
+        <input type="number" id="ipt_mass" placeholder="Insira a Massa (kg)">
+        <input type="number" id="ipt_speed" placeholder="Insira a Velocidade (m/s)"> <br><br>
+        <button onclick="calcImpact()">Calcular Impacto</button>
+        <div id="div_Impact"></div>
     </div>
-    
 </body>
 
 </html>
+
 <script>
     function calcKryptonite() {
         let strength = Number(ipt_strength.value);
@@ -88,7 +97,7 @@
 
         if (distance <= 0 || speed <= 0) {
             alert(`Digite um valor maior do que 0!`);
-        } else{
+        } else {
             div_Speed.innerHTML = `Superman chegou em ${time} segundos e deu uma bufa no Lex Luthor!`;
         }
     }

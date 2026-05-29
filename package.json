@@ -1,7 +1,7 @@
 {
   "name": "web-data-viz",
   "version": "1.0.0",
-  "description": "",
+  "description": "<<<<<<< HEAD\r <img src=\"https://user-images.githubusercontent.com/46379117/192358781-9ca879e4-e55e-4d0d-b876-f9a4a2ed9ae8.png\" width=\"600px\">",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -16,5 +16,16 @@
     "mysql2": "^3.9.4",
     "nodemon": "^2.0.7",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heloisa-Almeida/Projeto-Individual-Smallville-City.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Heloisa-Almeida/Projeto-Individual-Smallville-City/issues"
+  },
+  "homepage": "https://github.com/Heloisa-Almeida/Projeto-Individual-Smallville-City#readme"
 }

@@ -9,6 +9,8 @@
 body{
     background: #62a1ff;
     color: white;
+
+    overflow-x: hidden;
 }
 
 /* SLIDER */
@@ -37,13 +39,11 @@ body{
     flex-shrink: 0;
 }
 
-/* HEADER */
-
 header{
     background: linear-gradient(
         to top,
         rgba(223, 13, 13, 0),
-        rgba(223, 13, 13, 0.6)
+        rgba(255, 0, 0, 0.762)
     );
 
     border-top: 4px solid #ffd700;
@@ -61,23 +61,25 @@ header h1{
 }
 
 header img{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
-
-/* NAV */
 
 nav{
     display: flex;
     justify-content: center;
-    gap: 120px;
+    gap: 40px;
 
     flex-wrap: wrap;
 
     margin-top: 30px;
+
+    padding: 0 20px;
 }
 
 nav img{
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
 
     transition: 0.3s;
 
@@ -85,17 +87,7 @@ nav img{
 }
 
 .btn-calculadora img{
-    width: 200px;
-
-    margin-top: 25px;
-
-    transform: rotate(-2deg);
-}
-
-/* SORTEIO */
-
-.btn-sorteio img{
-    width: 200px;
+    max-width: 200px;
 
     margin-top: 25px;
 
@@ -103,17 +95,15 @@ nav img{
 }
 
 .btn-dash img{
-    width: 180px;
+    max-width: 180px;
 
     margin-top: 20px;
 
     transform: rotate(-1deg);
 }
 
-/* SOBRE */
-
 .btn-sobre img{
-    width: 200px;
+    max-width: 200px;
 
     margin-top: -10px;
 
@@ -121,7 +111,7 @@ nav img{
 }
 
 .btn-entry img{
-    width: 150px;
+    max-width: 150px;
 
     margin-top: 20px;
 
@@ -160,31 +150,43 @@ button:hover{
 .headerH{
     display: flex;
     justify-content: center;
+
     margin-top: 90px;
+
     transform: rotate(9deg);
 
+    padding: 0 20px;
 }
 
 .layout {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 30px;
+
     padding: 40px 20px;
+
     flex-wrap: wrap;
-    margin-top: -150px; /* ajuste esse valor ao gosto */
+
+    margin-top: -150px;
+
+    overflow-x: hidden;
 }
 
 .p1,
 .p2 {
     width: 18rem;
     height: 23rem;
+
     background-color: white;
+
     border: 4px solid #f2ff00;
+
     background-size: cover;
     background-position: center;
+
     flex-shrink: 0;
-    
 }
 
 .p1 {
@@ -197,24 +199,33 @@ button:hover{
 
 .text {
     text-align: center;
-    width: 40%;
+
+    width: 100%;
+    max-width: 600px;
+
     background: rgb(194, 29, 29);
+
     padding: 30px 25px;
+
     border-radius: 20px;
     border: 2px solid #ffd700;
+
     box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    /* remova o margin-top: -24% daqui */
 }
 
 .text p {
     color: white;
+
     font-size: 20px;
+
     font-family: 'Trebuchet MS', sans-serif;
+
     text-shadow: 2px 2px 6px black;
+
     text-align: center;
+
     line-height: 1.8;
 }
-/* CURIOSIDADES */
 
 .curiosidade{
     width: 80%;
@@ -280,6 +291,7 @@ select{
 }
 
 /* camada escura na imagem */
+
 #div_funFact::before{
     content: "";
 
@@ -291,13 +303,12 @@ select{
 }
 
 /* texto acima da camada escura */
+
 #div_funFact p{
     position: relative;
+
     z-index: 2;
 }
-
-
-/* FOOTER */
 
 footer{
     background: #c40000;
@@ -309,4 +320,24 @@ footer{
     text-align: center;
 
     margin-top: 50px;
+}
+
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-track{
+    background: #62a1ff;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ff0a0a;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #ac0000;
 }

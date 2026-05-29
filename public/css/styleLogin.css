@@ -1,11 +1,9 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     height: 100vh;
 
@@ -23,7 +21,6 @@ body {
 
     color: rgb(0, 0, 0);
 }
-/* TÍTULO */
 #title {
     margin-bottom: 30px;
 }
@@ -36,13 +33,12 @@ body {
     text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
 }
 
-/* CAIXA DOS CAMPOS */
 #campos {
-    width: 500px; /* aumenta a largura */
+    width: 500px; 
 
-    height: 350px; /* aumenta a altura */
+    height: 350px;
 
-    padding: 40px; /* aumenta o espaço interno */
+    padding: 40px;
 
     background-color: rgb(246, 255, 0);
 
@@ -55,7 +51,6 @@ body {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* TEXTOS */
 #campos p {
     margin-top: 15px;
     margin-bottom: 5px;
@@ -63,7 +58,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* INPUTS */
 #campos input {
     width: 100%;
 
@@ -93,7 +87,6 @@ body {
     box-shadow: 0px 0px 10px #ffd700;
 }
 
-/* BOTÃO */
 #button {
     margin-top: 35px;
 
@@ -102,7 +95,6 @@ body {
     justify-content: center;
 }
 
-/* BOTÃO ESTILO */
 #button button {
     width: 100%;
 
@@ -123,7 +115,6 @@ body {
     transition: 0.3s;
 }
 
-/* HOVER */
 #button button:hover {
     transform: scale(1.02);
 
