@@ -13,7 +13,6 @@ body{
     overflow-x: hidden;
 }
 
-/* SLIDER */
 
 .slider{
     width: 100%;
@@ -122,7 +121,6 @@ nav img:hover{
     transform: scale(1.05);
 }
 
-/* BOTÕES */
 
 button{
     background: #ffd700;
@@ -290,7 +288,6 @@ select{
     overflow: hidden;
 }
 
-/* camada escura na imagem */
 
 #div_funFact::before{
     content: "";
@@ -302,7 +299,6 @@ select{
     background: rgba(0,0,0,0.5);
 }
 
-/* texto acima da camada escura */
 
 #div_funFact p{
     position: relative;

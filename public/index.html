@@ -16,8 +16,6 @@
 </head>
 
 <body>
-
-    <!-- SLIDER -->
     <section class="slider">
         <div class="slides" id="slides"></div>
     </section>
@@ -112,16 +110,12 @@
 
         const slides = document.getElementById("slides");
 
-        // CRIAR IMAGENS
-
         for (let i = 0; i < banners.length; i++) {
 
             slides.innerHTML += `
                 <img src="${banners[i]}">
             `;
         }
-
-        // CARROSSEL
 
         let atual = 0;
 
@@ -138,8 +132,6 @@
         }
 
         setInterval(trocarSlide, 3000);
-
-        // CURIOSIDADES
 
         function showFunfact(){
 

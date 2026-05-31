@@ -116,7 +116,6 @@ header img{
     background-position: 50% 25%;
 }
 
-/* TÍTULOS */
 
 .calculadora1 h2,
 .calculadora2 h2,
@@ -125,8 +124,6 @@ header img{
 
     margin-bottom: 20px;
 }
-
-/* TEXTO */
 
 .calculadora1 p,
 .calculadora2 p,
@@ -155,7 +152,6 @@ input {
     font-size: 15px;
 }
 
-/* BOTÕES */
 
 button {
     background-color: #ff4444;
@@ -183,7 +179,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* RESULTADOS */
 
 div[id^="div_"] {
     margin-top: 18px;
@@ -212,7 +207,6 @@ div[id^="div_"] {
     background: #ac0000;
 }
 
-/* RESPONSIVO */
 
 @media (max-width: 768px){
 
